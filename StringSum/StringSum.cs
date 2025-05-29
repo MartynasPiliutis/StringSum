@@ -13,13 +13,13 @@ namespace StringSum
 
         internal string Sum(string? num1, string? num2)
         {
-            string sum = "0";
-            if (string.IsNullOrEmpty(num1) && string.IsNullOrEmpty(num2))
-            {
-                return sum;
-            }
+            int number1 = 0;
+            int number2 = 0;
 
-            return sum;
+            Int32.TryParse(num1, out number1);
+            Int32.TryParse(num2, out number2);
+
+            return (number1 + number2).ToString();
         }
     }
 }
